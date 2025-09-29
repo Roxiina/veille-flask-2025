@@ -1,34 +1,31 @@
-from flask import Flask
+from flask import Flask, render_template
 
-# Création de l'application Flask
 app = Flask(__name__)
 
-# Route principale
+# Route principale -> Hello HTML
 @app.route('/')
 def hello():
-    # HTML direct
-    return "Hello, Flask!"
+    return render_template('hello.html')
 
-# Route secondaire
+# Route secondaire -> Bonjour
 @app.route('/bonjour')
 def bonjour():
-    return "<h1>Bonjour à tous !</h1><p>Voici une deuxième page servie directement par Flask.</p>"
+    return render_template('bonjour.html')
 
-# Route index
+# Route index -> Menu général
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', username=None)
 
-# Route name
+# Route simple avec nom
 @app.route('/user/<name>')
 def user(name):
-    return f"Hello, {name}"
+    return f"<h2>Hello, {name}!</h2><p><a href='/index'>Retour à l'index</a></p>"
 
-# Route
+# Route avec nom via template
 @app.route('/perso/<name>')
-def user(name):
-    return render_template('index.html',username=name)
-# Point d'entrée
+def perso(name):
+    return render_template('index.html', username=name)
+
 if __name__ == "__main__":
-    # Active le mode debug pour rechargement automatique
     app.run(debug=True)

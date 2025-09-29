@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Flask</title>
+</head>
+<body>
+    <h1>Page Index</h1>
+    {% if username %}
+        <p>Bonjour, {{ username }} !</p>
+        <p><a href="/index">Retour à l'index</a></p>
+    {% else %}
+        <p>Choisis une page :</p>
+        <ul>
+            <li><a href="/">Page Hello</a></li>
+            <li><a href="/bonjour">Page Bonjour</a></li>
+            <li><a href="/user/Flavie">Page User</a></li>
+            <li><a href="/perso/Flavie">Page Perso</a></li>
+        </ul>
+    {% endif %}
+</body>
+</html>
