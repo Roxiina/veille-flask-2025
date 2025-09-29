@@ -51,11 +51,12 @@ Cette veille met en évidence les évolutions récentes, les bonnes pratiques as
 ## Ressources utilisées
 1. [Flask 3.1.1 Release Notes (GitHub)](https://github.com/pallets/flask/releases/tag/3.1.1)  
 2. [Flask-SQLAlchemy Queries Documentation](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/queries/#select)  
-3. Documentation officielle Flask : [flask.palletsprojects.com](https://flask.palletsprojects.com)  
-4. Articles sur Dockerisation et déploiement Flask  
-5. Guides Flask-RESTful et extensions de sécurité  
-6. Comparatif Flask vs FastAPI (2025) – sources sectorielles  
-7. Discussions communautaires et tutoriels avancés (Jinja2, décorateurs, tests unitaires)
+3. [Documentation officielle Flask](https://flask.palletsprojects.com)  
+4. [Tutoriel Flask REST API avec Flask-RESTful (Analytics Vidhya)](https://www.analyticsvidhya.com/blog/2022/01/rest-api-with-python-and-flask/)  
+5. [Comparatif Flask vs Node/Frameworks backend (Ingenious Minds Lab, 2025)](https://ingeniousmindslab.com/blogs/python-vs-node-best-backend-framework/)  
+6. [Discussion sur Flask-Login et compatibilité (GitHub Commit)](https://github.com/pallets/flask/commit/7d98a49bc38d0849367b348bfe37a2b689323419)  
+7. [Bootstrap 4.3.1 CDN (pour intégration Flask)](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css)  
+
 
 ---
 
