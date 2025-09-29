@@ -16,35 +16,40 @@ Cette veille met en évidence les évolutions récentes, les bonnes pratiques as
 
 ### 2. Migration SQLAlchemy 2.0
 - **Lien** : [Flask-SQLAlchemy Documentation](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/queries/#select)  
+- **Documentation complémentaire** : [SQLAlchemy 2.0 Migration Guide](https://docs.sqlalchemy.org/en/20/changelog/migration_20.html)  
 - **Résumé** : L’ancienne API `Query` est désormais dépréciée. Les requêtes doivent être construites avec `select()` et traitées via `Session.scalars()`.  
 - **Impact** : Adaptation du code existant et formation des équipes aux nouvelles pratiques.
 
 ### 3. Dockerisation de Flask
-- **Concept** : Utilisation de conteneurs Docker pour la portabilité et l’isolation.  
+- **Tutoriels / Références** : [Docker Docs – Get Started](https://docs.docker.com/get-started/), [Dockerizing a Python Flask Application](https://docs.docker.com/samples/python/)  
 - **Résumé** : Création d’un `Dockerfile` basé sur une image Python slim et utilisation de `docker-compose` pour orchestrer plusieurs services (par ex. Flask + PostgreSQL).  
 - **Impact** : Standardisation des environnements et simplification du déploiement.
 
 ### 4. API RESTful et Sécurité
-- **Concept** : Extension Flask-RESTful pour structurer les APIs.  
+- **Liens** : [Flask-RESTful Documentation](https://flask-restful.readthedocs.io/en/latest/), [Tutoriel REST API Flask](https://www.analyticsvidhya.com/blog/2022/01/rest-api-with-python-and-flask/), [Flask HTTPAuth](https://flask-httpauth.readthedocs.io/en/latest/)  
 - **Résumé** : Définition des endpoints via la classe `Resource` et sécurisation avec des outils tels que `flask-httpauth`.  
 - **Impact** : Meilleure organisation des APIs et renforcement de la sécurité par authentification.
 
 ### 5. Gestion des dépendances et tests unitaires
+- **Liens** : [Flask Testing Guide](https://flask.palletsprojects.com/en/2.3.x/testing/), [Python unittest Documentation](https://docs.python.org/3/library/unittest.html)  
 - **Résumé** : Les dépendances doivent être explicitement fixées (`Flask>=2.3.0,<3.0.0`) afin d’éviter les ruptures de compatibilité avec les extensions (ex. Flask-Login).  
 - **Impact** : Mise en place de tests unitaires systématiques pour garantir la stabilité des applications et valider les réponses HTTP.
 
 ### 6. Comparaison Flask vs FastAPI (2025)
+- **Liens** : [FastAPI Documentation](https://fastapi.tiangolo.com/), [Comparatif Flask vs Node.js](https://ingeniousmindslab.com/blogs/python-vs-node-best-backend-framework/)  
 - **Résumé** :  
   - *Flask* : flexibilité, légèreté, idéal pour les microservices.  
   - *FastAPI* : performance accrue (support natif asynchrone/ASGI), validation de schémas (Pydantic), auto-documentation via OpenAPI.  
 - **Impact** : Le choix dépend du contexte : rapidité de prototypage (Flask) ou performances et scalabilité (FastAPI).
 
 ### 7. Techniques avancées (Jinja2 et décorateurs)
+- **Liens** : [Jinja2 Documentation](https://jinja.palletsprojects.com/en/latest/), [Flask Routing & Decorators](https://flask.palletsprojects.com/en/2.3.x/quickstart/#routing)  
 - **Résumé** :  
   - Utilisation de Jinja2 pour la génération dynamique d’HTML.  
   - Décorateurs comme `@app.route` pour transformer des fonctions Python en vues.  
   - Décorateurs personnalisés possibles pour ajouter de la logique (ex. suivi des IP, contrôle des cookies).  
 - **Impact** : Renforcement de l’extensibilité et personnalisation des comportements applicatifs.
+
 
 ---
 
